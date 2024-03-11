@@ -63,7 +63,7 @@ fun toPartB() {
     Text(
         text = "Let's create an account for you",
         fontSize = 18.sp,
-        color = Gray,
+        color = LightBlack,
         fontWeight = FontWeight.SemiBold
     )
 }
@@ -189,7 +189,7 @@ fun botPartB() {
         Text(
             text = "Already a member?",
             fontSize = 17.sp,
-            color = Gray,
+            color = LightBlack,
             fontWeight = FontWeight.SemiBold
         )
 
