@@ -41,7 +41,6 @@ import androidx.compose.ui.unit.sp
 // Composable function to display the top part
 @Composable
 fun topPart() {
-
     // Load icon for display
     val icon = painterResource(id = R.drawable.lock)
 
