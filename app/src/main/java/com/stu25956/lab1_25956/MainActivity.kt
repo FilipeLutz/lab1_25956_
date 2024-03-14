@@ -32,11 +32,14 @@ class MainActivity : ComponentActivity() {
 }
 
 // Color constants
-val LightGray = Color.LightGray
 val White = Color.White
+val ConWhite = Color(0xFFEEEEEE)
+val LightGray = Color.LightGray
 val Gray = Color.Gray
-val Black = Color.Black
+val DarkGray = Color.DarkGray
 val LightBlack = Color(0xFF333333)
+val Black = Color.Black
+val Transparent = Color.Transparent
 
 // Preview function to display
 @Preview(showBackground = true)

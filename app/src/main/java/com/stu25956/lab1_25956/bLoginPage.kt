@@ -7,8 +7,10 @@ Continuous Assessment 1 (10%)
 */
 
 // import libraries
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -30,7 +32,6 @@ import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
@@ -74,7 +75,7 @@ fun myLoginBoxB() {
     Box(modifier = Modifier
         .height(140.dp)
         .width(320.dp)
-        .background(Color.Transparent),
+        .background(Transparent),
     ) {
         // Column layout to arrange login components vertically
         Column(
@@ -87,7 +88,9 @@ fun myLoginBoxB() {
             TextField(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .height(60.dp),
+                    .height(60.dp)
+                    .border(BorderStroke(3.dp, DarkGray),
+                        shape = RoundedCornerShape(10)),
                 textStyle = TextStyle(fontSize = 16.sp),
                 value = "Email",
                 onValueChange = {},
@@ -95,8 +98,8 @@ fun myLoginBoxB() {
                     focusedContainerColor = LightBlack,
                     unfocusedContainerColor = LightBlack,
                     disabledContainerColor = LightBlack,
-                    focusedIndicatorColor = Color.Transparent,
-                    unfocusedIndicatorColor = Color.Transparent,
+                    focusedIndicatorColor = Transparent,
+                    unfocusedIndicatorColor = Transparent,
                     focusedTextColor = White,
                     unfocusedTextColor = Gray),
                 shape = RoundedCornerShape(10)
@@ -105,7 +108,9 @@ fun myLoginBoxB() {
             TextField(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .height(60.dp),
+                    .height(60.dp)
+                    .border(BorderStroke(3.dp, DarkGray),
+                        shape = RoundedCornerShape(10)),
                 textStyle = TextStyle(fontSize = 16.sp),
                 value = "Password",
                 onValueChange = {},
@@ -113,8 +118,8 @@ fun myLoginBoxB() {
                     focusedContainerColor = LightBlack,
                     unfocusedContainerColor = LightBlack,
                     disabledContainerColor = LightBlack,
-                    focusedIndicatorColor = Color.Transparent,
-                    unfocusedIndicatorColor = Color.Transparent,
+                    focusedIndicatorColor = Transparent,
+                    unfocusedIndicatorColor = Transparent,
                     focusedTextColor = White,
                     unfocusedTextColor = Gray),
                 shape = RoundedCornerShape(10)
@@ -154,7 +159,9 @@ fun buttonPartB() {
                 .background(LightBlack,
                     shape = RoundedCornerShape(10))
                 .weight(1f)
-                .height(70.dp),
+                .height(70.dp)
+                .border(BorderStroke(3.dp, DarkGray),
+                    shape = RoundedCornerShape(10)),
             onClick = { },
             colors = ButtonDefaults.buttonColors(
                 containerColor = LightBlack,
@@ -218,7 +225,13 @@ fun bottomPartB() {
         Row {
 
             // Google login icon box
-            Box {
+            Box(
+                modifier = Modifier
+                    .border(
+                        BorderStroke(3.dp, DarkGray),
+                        shape = RoundedCornerShape(20)
+                    )
+            ) {
                 val googleIcon = painterResource(id = R.drawable.google)
                 Image(
                     painter = googleIcon,
@@ -226,8 +239,10 @@ fun bottomPartB() {
                     modifier = Modifier
                         .height(70.dp)
                         .width(70.dp)
-                        .background(LightBlack,
-                            shape = RoundedCornerShape(20))
+                        .background(
+                            LightBlack,
+                            shape = RoundedCornerShape(20)
+                        )
                         .padding(20.dp)
                 )
             }
@@ -236,7 +251,11 @@ fun bottomPartB() {
             Spacer(modifier = Modifier.width(25.dp))
 
             // Apple login icon box
-            Box {
+            Box (
+                modifier = Modifier
+                    .border(BorderStroke(3.dp, DarkGray),
+                        shape = RoundedCornerShape(20))
+            ){
                 val appleIcon = painterResource(id = R.drawable.applew)
                 Image(
                     painter = appleIcon,
