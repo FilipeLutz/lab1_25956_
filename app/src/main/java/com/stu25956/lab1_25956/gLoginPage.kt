@@ -14,7 +14,6 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -23,6 +22,7 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.Divider
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
@@ -81,8 +81,7 @@ fun myLoginBox() {
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.SpaceEvenly,
             modifier = Modifier
-                .fillMaxWidth()
-                .fillMaxHeight()
+                .fillMaxSize()
         ) {
             // Email text field
             TextField(
@@ -102,7 +101,6 @@ fun myLoginBox() {
                     unfocusedTextColor = Gray),
                 shape = RoundedCornerShape(10)
             )
-
             // Password text field
             TextField(
                 modifier = Modifier
@@ -186,9 +184,12 @@ fun bottomPart() {
             modifier = Modifier
                 .width(320.dp)
         ) {
-            // Text divider
-            Text(
-                text = "------------------------",
+            // Divider
+            Divider(
+                modifier = Modifier
+                    .width(97.dp)
+                    .padding(top = 12.dp, end = 3.dp),
+                thickness = 1.dp,
                 color = White
             )
 
@@ -196,21 +197,26 @@ fun bottomPart() {
             Text(
                 text = "Or continue with",
                 fontSize = 17.sp,
-                color = Gray
+                color = Gray,
+                fontWeight = FontWeight.SemiBold
             )
 
-            // Text divider
-            Text(
-                text = "------------------------",
+            // Divider
+            Divider(
+                modifier = Modifier
+                    .width(97.dp)
+                    .padding(top = 12.dp, start = 3.dp),
+                thickness = 1.dp,
                 color = White
             )
         }
 
         // Spacing
-        Spacer(modifier = Modifier.height(20.dp))
+        Spacer(modifier = Modifier.height(30.dp))
 
         // Row layout to display social login icons
         Row {
+
             // Google login icon box
             Box {
                 val googleIcon = painterResource(id = R.drawable.google)
@@ -220,7 +226,7 @@ fun bottomPart() {
                     modifier = Modifier
                         .height(70.dp)
                         .width(70.dp)
-                        .background( White,
+                        .background(White,
                             shape = RoundedCornerShape(20))
                         .padding(20.dp)
                 )
@@ -285,7 +291,7 @@ fun gLogin() {
         // Column layout to arrange elements vertically
         Column(
             horizontalAlignment = Alignment.CenterHorizontally,
-            verticalArrangement = Arrangement.SpaceAround,
+            verticalArrangement = Arrangement.SpaceEvenly,
             modifier = Modifier
                 .fillMaxSize(),
         ) {
@@ -295,7 +301,7 @@ fun gLogin() {
             // Column layout to arrange elements vertically
             Column(
                 horizontalAlignment = Alignment.CenterHorizontally,
-                verticalArrangement = Arrangement.SpaceEvenly,
+                verticalArrangement = Arrangement.SpaceBetween,
             ) {
                 // Display middle part
                 myLoginBox()

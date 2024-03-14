@@ -22,6 +22,7 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.Divider
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
@@ -81,7 +82,6 @@ fun myLoginBoxB() {
             verticalArrangement = Arrangement.SpaceEvenly,
             modifier = Modifier
                 .fillMaxSize()
-                .fillMaxWidth()
         ) {
             // Email text field
             TextField(
@@ -177,16 +177,19 @@ fun bottomPartB() {
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.SpaceBetween,
-        ) {
+    ) {
         // Row layout to display divider and text
         Row(
             horizontalArrangement = Arrangement.SpaceBetween,
             modifier = Modifier
                 .width(320.dp)
         ) {
-            // Text divider
-            Text(
-                text = "------------------------",
+            // Divider
+            Divider(
+                modifier = Modifier
+                    .width(97.dp)
+                    .padding(top = 12.dp, end = 3.dp),
+                thickness = 1.dp,
                 color = LightBlack
             )
 
@@ -194,18 +197,22 @@ fun bottomPartB() {
             Text(
                 text = "Or continue with",
                 fontSize = 17.sp,
-                color = LightBlack
+                color = LightBlack,
+                fontWeight = FontWeight.SemiBold
             )
 
-            // Text divider
-            Text(
-                text = "------------------------",
+            // Divider
+            Divider(
+                modifier = Modifier
+                    .width(97.dp)
+                    .padding(top = 12.dp, start = 3.dp),
+                thickness = 1.dp,
                 color = LightBlack
             )
         }
 
         // Spacing
-        Spacer(modifier = Modifier.height(20.dp))
+        Spacer(modifier = Modifier.height(30.dp))
 
         // Row layout to display social login icons
         Row {

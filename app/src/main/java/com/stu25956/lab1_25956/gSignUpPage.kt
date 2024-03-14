@@ -176,10 +176,12 @@ fun SignUpButton() {
     }
 }
 
+// Composable function to display the bottom part
 @Composable
 fun botPart() {
     // Row layout to arrange elements horizontally
-    Row( horizontalArrangement = Arrangement.SpaceEvenly,
+    Row(
+        horizontalArrangement = Arrangement.SpaceEvenly,
         modifier = Modifier
             .width(240.dp),
     ){
