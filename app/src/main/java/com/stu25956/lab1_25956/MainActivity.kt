@@ -21,7 +21,6 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         // Set content using Jetpack Compose
         setContent {
-
             // Call a composable function uncommenting it.
             gLogin()
             //gSignUp()
@@ -45,8 +44,8 @@ val Transparent = Color.Transparent
 @Preview(showBackground = true)
 @Composable
 fun DefaultPreview() {
-    //gLogin()
+    gLogin()
     //gSignUp()
-    bLogin()
+    //bLogin()
     //bSignUp()
 }
