@@ -1,1 +1,1 @@
-![ProjectPreview](https://github.com/FilipeLutz/lab1_25956_/assets/144668397/8823d6e4-7fcf-40de-a1b3-69ba499e3b1b)
+![Lab1](https://github.com/FilipeLutz/lab1_25956_/assets/144668397/c30fba98-f8ff-4a4f-8d03-a87880db91e2)
